@@ -3,10 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Ben Wallace | The Anchor of Motown</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #002D62; /* Pistons Navy */
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 4px solid #ED174C; /* Pistons Red */
+        }
+        .nav-container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ED174C;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 45, 98, 0.85), rgba(0, 45, 98, 0.85)), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #d1d1d1;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* Grid Layout for Bio and Stats */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Content Blocks */
+        section {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h3 {
+            color: #002D62;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 5px;
+        }
+
+        /* Stats Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #002D62;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Accolades List */
+        .accolades-list {
+            list-style: none;
+        }
+        .accolades-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        .accolades-list li::before {
+            content: "🏆";
+            margin-right: 10px;
+        }
+
+        /* Quote Section */
+        .quote-box {
+            background-color: #ED174C;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my index.html file.</p>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <h1>BIG BEN #3</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stats">Career Stats</a></li>
+                    <li><a href="#accolades">Accolades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Ben Wallace</h2>
+        <p>"No Meat, No Drink, No Damn Body."</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Big Bold Quote -->
+        <div class="quote-box">
+            "Heart over height. Undrafted, unheralded, but never outworked."
+        </div>
+
+        <div class="main-grid">
+            
+            <!-- Left Column: Biography & Legacy -->
+            <div class="left-column">
+                <section id="about">
+                    <h3>The Motown Anchor</h3>
+                    <p>Ben Wallace is widely regarded as one of the greatest defensive players in NBA history. Going undrafted out of Virginia Union University in 1996, Wallace fought his way into the league through sheer grit, rebounding tenacity, and elite rim protection.</p>
+                    <br>
+                    <p>Standing at a listed 6'9" (though often rumored to be closer to 6'7"), "Big Ben" routinely shut down the league's most dominant 7-foot centers. As the defensive anchor of the iconic 2003-2004 Detroit Pistons "Goin' to Work" era, he led the team to a legendary upset championship victory over the heavily favored Los Angeles Lakers.</p>
+                </section>
+
+                <section id="stats">
+                    <h3>Career Peak Statistics</h3>
+                    <p>While he wasn't known for scoring, his impact on the glass and the defensive end was staggering. Here is a look at his peak averages during his prime years in Detroit:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>PPG</th>
+                                <th>RPG</th>
+                                <th>BPG</th>
+                                <th>SPG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2001-02</td>
+                                <td>7.6</td>
+                                <td>13.0</td>
+                                <td>3.5</td>
+                                <td>1.7</td>
+                            </tr>
+                            <tr>
+                                <td>2002-03</td>
+                                <td>6.9</td>
+                                <td>15.4</td>
+                                <td>3.2</td>
+                                <td>1.4</td>
+                            </tr>
+                            <tr>
+                                <td>2003-04 ★</td>
+                                <td>9.5</td>
+                                <td>12.4</td>
+                                <td>3.2</td>
+                                <td>1.8</td>
+                            </tr>
+                            <tr>
+                                <td>2004-05</td>
+                                <td>9.7</td>
+                                <td>12.2</td>
+                                <td>2.4</td>
+                                <td>1.4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small style="display:block; margin-top:10px; color:#666;">★ Won NBA Championship</small>
+                </section>
+            </div>
+
+            <!-- Right Column: Accolades & Fast Facts -->
+            <div class="right-column">
+                <section id="accolades">
+                    <h3>Career Honors</h3>
+                    <ul class="accolades-list">
+                        <li><strong>Naismith Hall of Fame</strong> (Class of 2021)</li>
+                        <li><strong>NBA Champion</strong> (2004)</li>
+                        <li><strong>4x NBA Defensive Player of the Year</strong> (2002, 2003, 2005, 2006)</li>
+                        <li><strong>4x NBA All-Star</strong> (2003 - 2006)</li>
+                        <li><strong>5x All-Defensive First Team</strong></li>
+                        <li><strong>2x NBA Rebounding Leader</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Fast Facts</h3>
+                    <p><strong>Jersey:</strong> #3 (Retired by Detroit Pistons)</p>
+                    <p><strong>Nickname:</strong> Big Ben</p>
+                    <p><strong>Style Landmark:</strong> The iconic Afro that signaled maximum defensive intensity whenever it was grown out.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tribute Page. Built for the legendary Ben Wallace.</p>
+    </footer>
+
 </body>
 </html>
